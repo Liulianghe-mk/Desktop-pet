@@ -1,0 +1,67 @@
+.pet-behavior-settings {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8d9cc;
+}
+
+.pet-behavior-settings h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #5c4036;
+}
+
+.pet-behavior-hint {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #8a6f5c;
+  line-height: 1.45;
+}
+
+.pet-behavior-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #4a342c;
+  cursor: pointer;
+}
+
+.pet-behavior-toggle.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.pet-behavior-toggle input {
+  margin-top: 2px;
+  accent-color: #c97b5a;
+}
+
+.pet-behavior-interval {
+  margin-top: 4px;
+}
+
+.pet-behavior-interval input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.pet-behavior-interval.disabled {
+  opacity: 0.55;
+}
+
+.pet-behavior-reset {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #e8d9cc;
+  border-radius: 8px;
+  background: #fff7f1;
+  color: #6b4f42;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pet-behavior-reset:hover {
+  background: #f1e5da;
+}

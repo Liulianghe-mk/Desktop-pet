@@ -1,0 +1,135 @@
+.pet-quick-actions-settings {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #efe1d5;
+}
+
+.pet-quick-actions-settings h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #5c4036;
+}
+
+.pet-quick-actions-hint {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #a89888;
+}
+
+.pet-quick-actions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: min(340px, 45vh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.pet-quick-actions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pet-quick-actions-list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #d4b8a8;
+}
+
+.pet-quick-actions-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pet-quick-action-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: start;
+  padding: 8px;
+  border-radius: 10px;
+  background: #faf6f2;
+  border: 1px solid #efe1d5;
+}
+
+.pet-quick-action-enable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #6b4f42;
+  padding-top: 4px;
+}
+
+.pet-quick-action-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pet-quick-action-top {
+  display: grid;
+  grid-template-columns: 40px 1fr 72px;
+  gap: 6px;
+}
+
+.pet-quick-icon-input {
+  text-align: center;
+  font-size: 16px;
+}
+
+.pet-quick-action-fields input,
+.pet-quick-action-fields select,
+.pet-quick-action-top input,
+.pet-quick-action-top select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e8d9cc;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  background: #fff;
+  color: #4a342c;
+}
+
+.pet-quick-action-remove {
+  border: none;
+  border-radius: 8px;
+  background: #fce8e8;
+  color: #a04444;
+  font-size: 12px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.pet-quick-action-remove:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pet-quick-actions-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pet-quick-actions-footer button {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #f1e5da;
+  color: #5c4036;
+}
+
+.pet-quick-actions-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

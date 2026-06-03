@@ -1,0 +1,58 @@
+.pet-gif-rotation {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8d9cc;
+}
+
+.pet-gif-rotation-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4a342c;
+  cursor: pointer;
+}
+
+.pet-gif-rotation-toggle.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.pet-gif-rotation-toggle input {
+  accent-color: #c97b5a;
+}
+
+.pet-gif-rotation-hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #8a6f5c;
+}
+
+.pet-gif-rotation-interval {
+  margin-top: 8px;
+}
+
+.pet-gif-rotation-interval input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.pet-gif-rotation-interval.disabled {
+  opacity: 0.55;
+}
+
+.pet-gif-rotation-reset {
+  margin-top: 8px;
+  width: 100%;
+  border: 1px solid #e8d9cc;
+  border-radius: 8px;
+  background: #fff7f1;
+  color: #6b4f42;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pet-gif-rotation-reset:hover {
+  background: #f1e5da;
+}

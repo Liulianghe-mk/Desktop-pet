@@ -1,0 +1,139 @@
+.inventory-page {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px 4px 24px;
+}
+
+.inventory-header {
+  margin-bottom: 16px;
+}
+
+.inventory-title {
+  margin: 0;
+  font-size: 26px;
+  color: #4a342c;
+}
+
+.inventory-subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #a89888;
+}
+
+.inventory-equipped-summary {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #fffaf6;
+  border: 1px solid #efe1d5;
+}
+
+.inventory-equipped-summary h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #62493f;
+}
+
+.inventory-equipped-summary ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inventory-equipped-summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b5548;
+}
+
+.inventory-equipped-summary strong {
+  color: #4a342c;
+  text-align: right;
+}
+
+.inventory-empty {
+  text-align: center;
+  color: #a89888;
+  padding: 40px 16px;
+}
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inventory-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: #fffdfa;
+  border: 1px solid #efe1d5;
+}
+
+.inventory-card-visual {
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  min-height: 72px;
+}
+
+.inventory-card-body h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: #4a342c;
+}
+
+.inventory-card-hint {
+  margin: 0 0 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #a89888;
+}
+
+.inventory-card-meta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #c97b5a;
+  font-weight: 600;
+}
+
+.inventory-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.inventory-card-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #c97b5a;
+  color: #fff8f3;
+}
+
+.inventory-card-actions button.secondary {
+  background: #f1e5da;
+  color: #5c4036;
+}
+
+.inventory-card-actions button.danger {
+  background: #fce8e8;
+  color: #a04444;
+}
+
+.inventory-card-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

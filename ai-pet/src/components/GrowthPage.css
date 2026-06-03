@@ -1,0 +1,594 @@
+.growth-page {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding-bottom: 8px;
+}
+
+.growth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.growth-header h1 {
+  margin: 0 0 6px;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  color: #5c4036;
+}
+
+.growth-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #8f7c72;
+}
+
+.growth-coin-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #efe1d5;
+  background: #fffaf6;
+  color: #6b4f42;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.growth-coin-badge strong {
+  font-size: 16px;
+  color: #4a342c;
+}
+
+.evolution-card {
+  flex-shrink: 0;
+  border: 1px solid #efe5db;
+  border-radius: 24px;
+  padding: 20px 24px;
+  background: #fffdfa;
+}
+
+.evolution-card h2 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  color: #5c4036;
+}
+
+.evolution-timeline {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.evolution-step {
+  flex: 0 0 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.evolution-icon-shell {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evolution-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f5ebe3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: 2px solid #efe1d5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.evolution-step.done .evolution-icon {
+  background: #f1e5da;
+  border-color: #e0cfc0;
+}
+
+.evolution-step.current .evolution-icon {
+  width: 52px;
+  height: 52px;
+  background: #e8b4b0;
+  border-color: #dfa89e;
+  font-size: 24px;
+  box-shadow: 0 4px 14px rgba(232, 180, 176, 0.45);
+}
+
+.evolution-step.current .evolution-label {
+  color: #4a342c;
+}
+
+.evolution-step.locked .evolution-icon {
+  opacity: 0.5;
+  filter: grayscale(0.45);
+}
+
+.evolution-step-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-height: 36px;
+}
+
+.evolution-connector {
+  flex: 1 1 0;
+  min-width: 12px;
+  height: 4px;
+  margin-top: 26px;
+  border-radius: 999px;
+  background: #e8d4c4;
+}
+
+.evolution-connector.filled {
+  background: linear-gradient(90deg, #dfa89e, #e8b4b0);
+}
+
+.evolution-connector.filled-partial {
+  background: linear-gradient(90deg, #e8b4b0 0%, #e8b4b0 45%, #e8d4c4 45%, #e8d4c4 100%);
+}
+
+.evolution-label {
+  font-size: 13px;
+  color: #5c4036;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.evolution-sublabel {
+  font-size: 11px;
+  color: #9a8375;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f5ebe3;
+}
+
+.evolution-step.current .evolution-sublabel {
+  background: #f1ddd9;
+  color: #6b4f42;
+  font-weight: 600;
+}
+
+.growth-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+  gap: 16px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pet-profile-card {
+  border: 1px solid #efe5db;
+  border-radius: 24px;
+  padding: 16px;
+  background: #fffdfa;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pet-profile-visual {
+  position: relative;
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 20%, #fffefe, #f0e8e0);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 12px 12px;
+}
+
+.level-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fffdfa;
+  border: 1px solid #efe1d5;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b4f42;
+}
+
+.pet-profile-gif {
+  width: clamp(140px, 28vw, 220px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(92, 64, 54, 0.12));
+}
+
+.pet-profile-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #5c4036;
+  text-align: center;
+}
+
+.xp-block {
+  padding: 0 4px;
+}
+
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #6b5548;
+}
+
+.xp-header strong {
+  color: #4a342c;
+}
+
+.xp-track {
+  height: 10px;
+  border-radius: 999px;
+  background: #edd9cb;
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e8b4b0, #dfa89e);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.xp-hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #9a8375;
+}
+
+.xp-hint strong {
+  color: #6b4f42;
+}
+
+.status-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.status-badge-wide {
+  grid-column: 1 / -1;
+}
+
+.status-badge {
+  border: 1px solid #efe1d5;
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: #fffaf6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status-badge span {
+  font-size: 12px;
+  color: #9a8375;
+}
+
+.status-badge strong {
+  font-size: 14px;
+  color: #5c4036;
+}
+
+.growth-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+}
+
+.skills-card,
+.training-card {
+  border: 1px solid #efe5db;
+  border-radius: 24px;
+  padding: 18px;
+  background: #fffdfa;
+}
+
+.skills-card header,
+.training-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.skills-card h2,
+.training-card h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #5c4036;
+}
+
+.skills-card header span {
+  font-size: 12px;
+  color: #9a8375;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skill-slot {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  border: 1px solid #efe1d5;
+  background: #fffaf6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  cursor: default;
+  font: inherit;
+}
+
+.skill-main-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.skill-slot.unlocked {
+  cursor: pointer;
+  background: #fdf8f4;
+}
+
+.skill-slot.unlocked.enabled {
+  border-color: #c8e6c9;
+  background: linear-gradient(160deg, #f8fff8, #fdf8f4);
+}
+
+.skill-slot.active {
+  outline: 2px solid #d8b49f;
+  outline-offset: 1px;
+}
+
+.skill-slot.unlocked.disabled {
+  opacity: 0.72;
+  border-style: dashed;
+}
+
+.skills-hint {
+  margin: -6px 0 12px;
+  font-size: 12px;
+  color: #9a8375;
+  line-height: 1.45;
+}
+
+.skill-toggle-hint {
+  font-size: 10px;
+  color: #a0806e;
+  line-height: 1.2;
+}
+
+.skill-slot.unlocked.enabled .skill-toggle-hint {
+  color: #5a8f5c;
+  font-weight: 600;
+}
+
+.skill-slot.unlocked:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 83, 68, 0.12);
+}
+
+.skill-slot.locked {
+  background: #f5f0eb;
+  opacity: 0.85;
+}
+
+.skill-unlock-btn {
+  border: 1px solid #e6cbb9;
+  border-radius: 999px;
+  background: #fff9f5;
+  color: #6b4f42;
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.skill-unlock-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.skill-settings-panel {
+  margin-top: 12px;
+  border: 1px solid #efe1d5;
+  border-radius: 14px;
+  background: #fff9f5;
+  padding: 12px;
+}
+
+.skill-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-settings-header h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #5c4036;
+}
+
+.skill-settings-header span {
+  font-size: 11px;
+  color: #9a8375;
+}
+
+.skill-settings-desc {
+  margin: 8px 0 10px;
+  font-size: 12px;
+  color: #7f685c;
+  line-height: 1.4;
+}
+
+.skill-settings-row {
+  display: flex;
+  align-items: center;
+}
+
+.skill-setting-toggle {
+  border: 1px solid #dfc6b5;
+  border-radius: 999px;
+  background: #fff;
+  color: #6b4f42;
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.skill-setting-toggle.on {
+  background: #eef8ef;
+  border-color: #bdddbf;
+  color: #4f7c53;
+}
+
+.skill-icon {
+  font-size: 24px;
+}
+
+.skill-lock {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.skill-name {
+  font-size: 11px;
+  color: #6b5148;
+  line-height: 1.25;
+}
+
+.training-mode-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1e5da;
+  color: #6b5148;
+  font-weight: 600;
+}
+
+.training-desc {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #8f7c72;
+  line-height: 1.45;
+}
+
+.training-slider input[type="range"] {
+  width: 100%;
+  height: 6px;
+  accent-color: #7d5344;
+  margin-bottom: 10px;
+}
+
+.training-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #9a8375;
+}
+
+.training-labels span.active {
+  color: #5c4036;
+  font-weight: 700;
+}
+
+.desktop-shell.growth-mode {
+  grid-template-columns: minmax(200px, 16%) minmax(0, 1fr);
+}
+
+.desktop-shell.growth-mode .right-panel {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .growth-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evolution-timeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 4px 0 4px 8px;
+  }
+
+  .evolution-step {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .evolution-icon-shell {
+    flex-shrink: 0;
+  }
+
+  .evolution-step-text {
+    align-items: flex-start;
+    min-height: 0;
+  }
+
+  .evolution-label {
+    text-align: left;
+  }
+
+  .evolution-connector {
+    flex: none;
+    width: 4px;
+    height: 20px;
+    min-width: 0;
+    margin: 0 0 0 26px;
+  }
+
+  .evolution-connector.filled-partial {
+    background: linear-gradient(180deg, #e8b4b0 0%, #e8b4b0 45%, #e8d4c4 45%, #e8d4c4 100%);
+  }
+}
